@@ -1,0 +1,20 @@
+#ifndef LITTLE_ENDIAN_H
+#define LITTLE_ENDIAN_H
+
+#include <stdint.h>
+
+uint16_t load2(unsigned char*);
+
+void store2(unsigned char*, uint16_t);
+
+uint32_t load4(unsigned char *);
+
+void store4(unsigned char *, uint32_t);
+
+void store8(unsigned char *, uint64_t);
+
+uint64_t load8(unsigned char*);
+
+unsigned char byterev(unsigned char);
+
+#endif
