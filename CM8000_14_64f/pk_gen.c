@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdio.h>
 
 #include "pk_gen.h"
 #include "evaluation.h"
@@ -102,6 +103,11 @@ int column_switch(unsigned char matrix[][GOPPA_N/8], uint16_t *pi, uint32_t *col
 
         store4(&matrix[i][index], check);
     }
+	
+	printf("column swap(index begin with 0):");
+	for (i = 0; i < 16; ++i)
+		printf(" (%d, %d)", row + i, row + pivot_ind[i]);
+	printf("\n\n");
 
     return 0;
 }
